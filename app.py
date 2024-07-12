@@ -5,7 +5,9 @@ app = Flask(__name__)
 # Sample data
 writers = [
     {'id': 1, 'name': 'Alice', 'blogs': ['Blog 1 by Alice', 'Blog 2 by Alice'], 'comments': ['Great blog!', 'Very informative.']},
-    {'id': 2, 'name': 'Bob', 'blogs': ['Blog 1 by Bob', 'Blog 2 by Bob'], 'comments': ['Awesome!', 'Nice read.']}
+    {'id': 2, 'name': 'Bob', 'blogs': ['Blog 1 by Bob', 'Blog 2 by Bob'], 'comments': ['Awesome!', 'Nice read.']},
+    {'id': 3, 'name': 'Charlie', 'blogs': ['Blog 1 by Charlie', 'Blog 2 by Charlie'], 'comments': ['Excellent!', 'Loved it.']},
+    {'id': 4, 'name': 'Daisy', 'blogs': ['Blog 1 by Daisy', 'Blog 2 by Daisy'], 'comments': ['Wonderful!', 'So helpful.']}
 ]
 
 @app.route('/')

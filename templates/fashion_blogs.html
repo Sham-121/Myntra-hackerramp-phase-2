@@ -12,16 +12,21 @@
     </div>
     <div class="container">
         <h1>Fashion Blogs</h1>
-        <form action="/search" method="post">
+        <form action="/search" method="post" class="search-container">
             <input type="text" name="query" placeholder="Search blog writer">
             <button type="submit">Search</button>
         </form>
         <h2>Trending Blog Writers</h2>
-        <ul>
+        <div class="trending-bloggers">
             {% for writer in writers %}
-                <li class="card"><a href="/writer/{{ writer.id }}">{{ writer.name }}</a></li>
+                <div class="blogger-card">
+                    <a href="/writer/{{ writer.id }}">
+                        <img src="https://via.placeholder.com/100" alt="Profile Picture of {{ writer.name }}">
+                        <div>{{ writer.name }}</div>
+                    </a>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </body>
 </html>

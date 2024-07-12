@@ -8,25 +8,29 @@
 <body>
     <div class="navbar">
         <div>Myntra</div>
-        <a href="/fashion_blogs">Back</a>
+        <a href="/fashion_blogs">Back to Blogs</a>
     </div>
-    <div class="container">
+    <div class="container profile-container">
         <div class="profile-header">
-            <img src="https://via.placeholder.com/60" alt="Profile Picture">
             <div>{{ writer.name }}</div>
+            <img src="https://via.placeholder.com/150" alt="Profile Picture of {{ writer.name }}">
         </div>
-        <h2>Blogs</h2>
-        <ul>
-            {% for blog in writer.blogs %}
-                <li class="card">{{ blog }}</li>
-            {% endfor %}
-        </ul>
-        <h2>Comments</h2>
-        <ul>
+        <div class="recent-blog">
+            <h2>Recent Blog</h2>
+            <div class="blog-content">
+                <img src="https://via.placeholder.com/40" alt="Profile Picture of {{ writer.name }}">
+                <div class="blog-text">"CHECK OUT THIS NEW SUIT I DESIGNED"</div>
+            </div>
+        </div>
+        <div class="comments-section">
+            <h2>Comments</h2>
             {% for comment in writer.comments %}
-                <li class="card">{{ comment }}</li>
+                <div class="comment">
+                    <img src="https://via.placeholder.com/40" alt="Profile Picture of commenter">
+                    <div class="comment-text">{{ comment }}</div>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </body>
 </html>
