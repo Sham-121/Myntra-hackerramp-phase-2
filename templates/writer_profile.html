@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ writer.name }}'s Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div>Myntra</div>
+        <a href="/fashion_blogs">Back</a>
+    </div>
+    <div class="container">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/60" alt="Profile Picture">
+            <div>{{ writer.name }}</div>
+        </div>
+        <h2>Blogs</h2>
+        <ul>
+            {% for blog in writer.blogs %}
+                <li class="card">{{ blog }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Comments</h2>
+        <ul>
+            {% for comment in writer.comments %}
+                <li class="card">{{ comment }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Screen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div>Myntra</div>
+        <a href="/explore">Explore</a>
+    </div>
+    <div class="container">
+        <h1>Welcome to Myntra</h1>
+
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x300" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x300" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x300" alt="Slide 3">
+                </div>
+            </div>
+            <button class="carousel-control prev">&lt;</button>
+            <button class="carousel-control next">&gt;</button>
+        </div>
+
+        <button class="explore-button" onclick="window.location.href='/explore'">Xplore</button>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

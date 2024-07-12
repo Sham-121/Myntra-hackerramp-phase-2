@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fashion Blogs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div>Myntra</div>
+        <a href="/">Home</a>
+    </div>
+    <div class="container">
+        <h1>Fashion Blogs</h1>
+        <form action="/search" method="post">
+            <input type="text" name="query" placeholder="Search blog writer">
+            <button type="submit">Search</button>
+        </form>
+        <h2>Trending Blog Writers</h2>
+        <ul>
+            {% for writer in writers %}
+                <li class="card"><a href="/writer/{{ writer.id }}">{{ writer.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

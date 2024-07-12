@@ -1,0 +1,183 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+    font-weight: normal;
+}
+
+.navbar {
+    background-color: #ff3f6c;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+button {
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ff5a7a;
+    transform: scale(1.05);
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ff3f6c;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff5a7a;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.profile-header div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.explore-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.explore-button:hover {
+    background-color: #ff5a7a;
+    transform: scale(1.1);
+}
+
+/* New CSS for Carousel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
