@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Myntra Clothes Detector",
+  "version": "1.0",
+  "description": "Detects clothes on Myntra and notifies the user.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://www.myntra.com/*",
+    "https://www.pinterest.com/*",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  }
+}
