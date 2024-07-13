@@ -3,23 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myntra Product Link</title>
+  <title>Myntra Product Details</title>
   <style>
     body {
-      width: 250px;
-      height: 100px;
+      width: 300px;
+      padding: 10px;
       font-family: Arial, sans-serif;
       font-size: 14px;
     }
-    a {
+    .product-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .product-link {
+      display: block;
       color: #0066cc;
+      margin-top: 10px;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <p>This product is available on Myntra:</p>
-  <a id="productLink" target="_blank" href="#">Product Link</a>
+  <h2>Myntra Product Details</h2>
+  <div id="productDetails">
+    <p>Loading...</p>
+  </div>
 
   <script src="popup.js"></script>
 </body>

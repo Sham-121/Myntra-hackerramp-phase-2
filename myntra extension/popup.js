@@ -2,22 +2,24 @@
 
 // Listen for messages from content script
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-    if (message.action === 'openPopup') {
-      const imageUrl = message.imageUrl;
-  
-      // Example: Generate Myntra product link based on image URL
-      const productLink = generateMyntraLink(imageUrl);
-  
-      // Update popup with product link
-      document.getElementById('productLink').href = productLink;
-      document.getElementById('productLink').textContent = productLink;
-    }
-  });
-  
-  // Example function to generate Myntra product link
-  function generateMyntraLink(imageUrl) {
-    // Implement logic to generate Myntra product link based on image URL
-    // Example: Construct link to Myntra product page
-    return `https://www.myntra.com/product?url=${encodeURIComponent(imageUrl)}`;
+  if (message.action === 'openPopup' && message.product) {
+    const product = message.product;
+    displayProductDetails(product);
   }
-  
+});
+
+// Function to display product details in popup
+function displayProductDetails(product) {
+  const productDetailsDiv = document.getElementById('productDetails');
+  if (product) {
+    const productHtml = `
+      <img class="product-image" src="${product.image}" alt="${product.name}">
+      <p><strong>${product.name}</strong></p>
+      <p>Price: ${product.price}</p>
+      <a class="product-link" href="${product.link}" target="_blank">View on Myntra</a>
+    `;
+    productDetailsDiv.innerHTML = productHtml;
+  } else {
+    productDetailsDiv.innerHTML = '<p>Product details not available.</p>';
+  }
+}
