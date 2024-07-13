@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div>Myntra</div>
+        <a href="/explore">Explore</a>
+    </div>
+    <div class="container">
+        <h1>Personal wardrobe</h1>
+        <p>Here's some suggestion based on your recent purchases and requirements!</p>
+        <div class="recommendations">
+            {% for item in recommendations %}
+                <div class="recommendation-card">
+                    <img src="{{ item.image }}" alt="{{ item.title }}">
+                    <div class="recommendation-info">
+                        <h2>{{ item.title }}</h2>
+                        <p>Price: {{ item.price }}</p>
+                        <p>Discount: {{ item.discount }}</p>
+                        <p>Best Price: {{ item.final_price }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="back-button" onclick="window.location.href='/personal_wardrobe'">BACK</button>
+    </div>
+</body>
+</html>

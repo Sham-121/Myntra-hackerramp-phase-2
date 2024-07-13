@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
@@ -11,6 +12,7 @@ h1, h2 {
     font-weight: normal;
 }
 
+/* Navbar styles */
 .navbar {
     background-color: #ff3f6c;
     color: white;
@@ -27,6 +29,7 @@ h1, h2 {
     font-weight: bold;
 }
 
+/* Container styles */
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -36,6 +39,7 @@ h1, h2 {
     border-radius: 8px;
 }
 
+/* Button styles */
 button {
     background-color: #ff3f6c;
     color: white;
@@ -56,6 +60,7 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* Form styles */
 form {
     margin: 20px 0;
 }
@@ -68,6 +73,7 @@ input[type="text"] {
     width: calc(100% - 22px);
 }
 
+/* List styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -87,6 +93,7 @@ a:hover {
     color: #ff5a7a;
 }
 
+/* Card styles */
 .card {
     background-color: white;
     border: 1px solid #ccc;
@@ -96,6 +103,7 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Profile header styles */
 .profile-header {
     display: flex;
     align-items: center;
@@ -113,6 +121,7 @@ a:hover {
     font-weight: bold;
 }
 
+/* Explore button styles */
 .explore-button {
     position: fixed;
     bottom: 20px;
@@ -138,7 +147,7 @@ a:hover {
     transform: scale(1.1);
 }
 
-/* Flexbox container for the search bar and button */
+/* Search container styles */
 .search-container {
     display: flex;
     align-items: center;
@@ -149,7 +158,7 @@ a:hover {
     margin-right: 10px;
 }
 
-/* Styling for the trending bloggers */
+/* Trending bloggers styles */
 .trending-bloggers {
     display: flex;
     flex-direction: column;
@@ -170,7 +179,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* New CSS for Carousel */
+/* Carousel styles */
 .carousel {
     position: relative;
     max-width: 800px;
@@ -214,9 +223,7 @@ a:hover {
     right: 10px;
 }
 
-
-/* this is for writer_profile.html */
-
+/* Writer profile styles */
 .profile-container {
     text-align: center;
 }
@@ -275,6 +282,7 @@ a:hover {
     font-size: 16px;
 }
 
+/* Comments section styles */
 .comments-section {
     background-color: #f8f8f8;
     padding: 20px;
@@ -307,5 +315,161 @@ a:hover {
 }
 
 .comment-text {
+    font-size: 16px;
+}
+
+/* Personal Wardrobe Page Styles */
+
+/* Container for the personal wardrobe page */
+.personal-wardrobe-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.personal-wardrobe-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button,
+.info-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Category selection styles */
+.category-selection {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.category {
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.category:hover {
+    background-color: #ff5a7a;
+    transform: scale(1.05);
+}
+
+/* Image upload section styles */
+.image-upload {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image-button,
+.add-more-button {
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.image-button:hover,
+.add-more-button:hover {
+    background-color: #ff5a7a;
+    transform: scale(1.1);
+}
+
+/* Description styles */
+.description {
+    margin: 20px 0;
+}
+
+.description textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 100px;
+}
+
+/* Reference image section styles */
+.reference-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.reference-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.photo-button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Recent items styles */
+.recent-items {
+    margin: 20px 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+}
+
+.recommendations-button {
+    width: 100%;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
     font-size: 16px;
 }

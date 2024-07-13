@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Wardrobe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="personal-wardrobe-container">
+        <header>
+            <button class="back-button">&#8592;</button>
+            <h1>Personal Wardrobe</h1>
+            <button class="info-button">&#8505;</button>
+        </header>
+
+        <div class="category-selection">
+            <button class="category">Tops</button>
+            <button class="category">Bottoms</button>
+            <button class="category">Shoes</button>
+        </div>
+
+        <div class="image-upload">
+            <button class="image-button">+</button>
+            <button class="add-more-button">Add More</button>
+        </div>
+
+        <div class="description">
+            <textarea placeholder="Description..."></textarea>
+        </div>
+
+        <div class="reference-image">
+            <img src="https://via.placeholder.com/150" alt="Reference">
+            <button class="photo-button">Add Photo</button>
+        </div>
+
+        <div class="recent-items">
+            <div class="item">
+                <img src="https://via.placeholder.com/50" alt="Item">
+                <span>Item Description</span>
+                <button class="remove-button">&#10005;</button>
+            </div>
+            <!-- Add more items here -->
+        </div>
+
+        <button class="recommendations-button" onclick="window.location.href='/recommendations'">Get Recommendations</button>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
