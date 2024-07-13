@@ -48,5 +48,9 @@ def recommendations():
     ]
     return render_template('recommendations.html', recommendations=recommendations)
 
+@app.route('/customize')
+    def customize():
+        return render_template('customize.html',writers=writers)
+
 if __name__ == '__main__':
     app.run(debug=True)
