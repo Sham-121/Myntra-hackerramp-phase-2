@@ -13,20 +13,22 @@
     <div class="container profile-container">
         <div class="profile-header">
             <div>{{ writer.name }}</div>
-            <img src="https://via.placeholder.com/150" alt="Profile Picture of {{ writer.name }}">
+            <img src="{{ writer.image_url }}" alt="Profile Picture of {{ writer.name }}">
         </div>
         <div class="recent-blog">
-            <h2>Recent Blog</h2>
-            <div class="blog-content">
-                <img src="https://via.placeholder.com/40" alt="Profile Picture of {{ writer.name }}">
-                <div class="blog-text">"CHECK OUT THIS NEW SUIT I DESIGNED"</div>
-            </div>
+            <h2>Recent Blogs</h2>
+            {% for blog in writer.blogs %}
+                <div class="blog-content">
+                    <img src="{{ writer.image_url }}" alt="Profile Picture of {{ writer.name }}">
+                    <div class="blog-text">"{{ blog }}"</div>
+                </div>
+            {% endfor %}
         </div>
         <div class="comments-section">
             <h2>Comments</h2>
             {% for comment in writer.comments %}
                 <div class="comment">
-                    <img src="https://via.placeholder.com/40" alt="Profile Picture of commenter">
+                    <img src="https://i.pinimg.com/236x/12/0b/4e/120b4eb92accaca6334b94d1dcb56f92.jpg" alt="Profile Picture of commenter">
                     <div class="comment-text">{{ comment }}</div>
                 </div>
             {% endfor %}

@@ -21,7 +21,7 @@
             {% for writer in writers %}
                 <div class="blogger-card">
                     <a href="/writer/{{ writer.id }}">
-                        <img src="https://via.placeholder.com/100" alt="Profile Picture of {{ writer.name }}">
+                        <img src="{{ writer.image_url }}" alt="Profile Picture of {{ writer.name }}">
                         <div>{{ writer.name }}</div>
                     </a>
                 </div>
