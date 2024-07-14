@@ -43,10 +43,10 @@ def personal_wardrobe():
 def recommendations():
     # Sample recommendations data
     recommendations = [
-        {'image': 'https://via.placeholder.com/150', 'title': 'THE FORMAL CLUB', 'price': '₹999', 'discount': '25% OFF', 'final_price': '₹749'},
-        {'image': 'https://via.placeholder.com/150', 'title': 'Van Heusen', 'price': '₹1,599', 'discount': '20% OFF', 'final_price': '₹1,279'},
-        {'image': 'https://via.placeholder.com/150', 'title': 'Brand 3', 'price': '₹1,299', 'discount': '15% OFF', 'final_price': '₹1,104'},
-        {'image': 'https://via.placeholder.com/150', 'title': 'Brand 4', 'price': '₹1,199', 'discount': '10% OFF', 'final_price': '₹1,079'}
+        {'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUc1gCeVHoX8TTKGR1ZyxvJhNmkgZxGslkPQ&s', 'title': 'THE FORMAL CLUB', 'price': '₹999', 'discount': '25% OFF', 'final_price': '₹749'},
+        {'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPM5SRa7BtItUTISlkGxSTvtTSOg9wdlcQuw&s', 'title': 'Van Heusen', 'price': '₹1,599', 'discount': '20% OFF', 'final_price': '₹1,279'},
+        {'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS65AXMuR8tE6OCj1NbBoiv7qCaQi8VRUuSUA&s', 'title': 'Brand 3', 'price': '₹1,299', 'discount': '15% OFF', 'final_price': '₹1,104'},
+        {'image': 'https://tiimg.tistatic.com/fp/1/004/302/men-grey-coat-pant-943.jpg', 'title': 'Brand 4', 'price': '₹1,199', 'discount': '10% OFF', 'final_price': '₹1,079'}
     ]
     return render_template('recommendations.html', recommendations=recommendations)
 
